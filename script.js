@@ -26,7 +26,9 @@ function changeTheme(){
 
 const text = document.querySelector('#todo-input');
 
-const list = document.querySelector('.todo-list')
+const list = document.querySelector('.todo-list');
+
+
 
 addBtn.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -54,6 +56,7 @@ addBtn.addEventListener('click',(e)=>{
 
 
 list.addEventListener('click',deleteCheck);
+list.addEventListener('touch',deleteCheck)
 
 function deleteCheck(e){
     if(e.target.classList[0]==="delete"){
