@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background">
+  </div>
+  <div class="container">
+   <header>
+    <h1 class="header-title">TODO</h1>
+    <button class="theme-button" title="change theme" onclick="changeTheme()"></button>
+    <form action="" class="form-input">
+      <input type="text" name="todo" id="todo-input" class="todo-add" placeholder="Create a new Todo....">
+      <button type="submit" class="addbtn">Add</button>
+    </form>
+   </header>
+  </div>
+
+  <main>
+    <ul class="todo-list">
+      
+     
+    </ul>
+    <ul class="editing">
+      <li class="counting-mob"><span>0</span> items left</li>
+      <li class="clear-mob">Clear completed</li>
+    </ul>
+  </main>
+  <footer>
+    <div class="counting"><span>0</span> items left</div>
+    <ul>
+      <li class="show-all active">All</li>
+      <li class="show-active">Active</li>
+      <li class="show-completed">Completed</li>
+    </ul>
+    <div class="clear">Clear completed</div>
+  </footer>
+  
+  
+<!--
+  Todo
+
+   Add dynamic number items left
+
+  All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list
+
+-->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

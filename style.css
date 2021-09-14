@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    background-color: hsl(235, 21%, 11%);
+    transition: 0.5s;
+}
+
+.body-light{
+    background-color: white;
+}
+
+.container{
+    margin: 15% auto;
+    width: 75%;
+}
+.background{
+    width: 100%;
+    height:33vh;
+    background-color: hsl(235, 21%, 11%);
+    background-image: url(images/bg-mobile-dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.background-light { 
+    background-image: url(images/bg-mobile-light.jpg);
+}
+.theme-button{
+    background-image: url(images/icon-sun.svg);
+    width: 26px;
+    height: 26px;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+    padding-top:20px;
+    transition: 0.5s;
+}
+
+.btn-moon{
+    background-image: url(images/icon-moon.svg);
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header-title{
+    color: white;
+    letter-spacing: 15px;
+    line-height: 30px;
+}
+
+.form-input{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.todo-add{
+    flex-grow: 1;
+    background: #25273c;
+    caret-color: #cacde8;
+    color:#cacde8;
+    border: none;
+    padding:8px;
+}
+
+.todo-add-light{
+    background: white;
+    color: black;
+    caret-color: black;
+}
+
+
+
+.addbtn{
+    padding: 8px;
+    background-color: #161722;
+    color: #cacde8;
+    border: none;
+}
+
+.light-add{
+    background-color: lightblue;
+    color: black;
+}
+
+#todo-input:focus , .form-input button:focus{
+    outline: none;
+}
+
+
+
+
+
+
+
+
+main{
+    margin: 15% auto;
+    width: 75%;
+    box-shadow: 0px 14px 76px -4px rgba(0,0,0,0.75);
+}
+ul{
+    list-style: none;
+}
+
+.todo-list{
+    background-color: #25273c;
+    overflow: hidden;
+    display: grid;
+    grid-gap: 0.5px;
+}
+
+    
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 10px;
+}
+.todo-list li:not(.editing li){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 30px;   
+    background: #25273c;
+    overflow: hidden;
+    transition: 0.5s;
+    border-bottom: 1px solid hsl(233, 18%, 38%)
+}
+
+.todo-text{
+    flex-grow: 1;
+    margin-top: 2px;
+    font-size: small;
+}
+
+li button{
+    background: #25273c ;
+    border: none;
+    padding: 15px;
+    color: white;
+}
+
+.completed div{
+    text-decoration: line-through;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.completed  .circle{
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) ;
+    position: relative;
+}
+
+.completed .circle::after{
+    content: "";
+    background-image: url(images/icon-check.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top:2px;
+    left: 1px;
+    transition: 0.5s;
+}
+
+.editing{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: #25273c;
+    border-radius:0 0 7px 7px;
+}
+
+.editing li{
+    background-color: #25273c;
+    color: gray;
+}
+
+.active{
+    color: rgb(0, 89, 255);
+    font-weight:bolder ;
+}
+
+.counting{
+    flex-grow: 1;
+}
+
+.clear{
+    flex-grow: 1;
+    text-align: right;
+}
+
+.white, .white .white:not(.editing li), .white .white button, .white li, .white ul{
+    background: white;
+    color: gray;
+}
+
+main.white{
+    border-radius: 0 0 7px 7px;
+}
+
+.white .white .todo-text{
+    color: black;
+
+}
+
+.white .circle{
+    border: 1px solid gray;
+}
+
+.white ul .active{
+    color: rgb(0, 89, 255);
+    font-weight:bolder ;
+}
+
+
+footer{
+    margin: 15% auto;
+    width: 75%;
+    position: relative;
+    top:-40px;
+    background-color: #25273c;
+    color: gray;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.counting , .clear{
+    display:none;
+}
+
+footer ul{
+    display:flex;
+    justify-content: space-around;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: xx-small;
+    
+}
+
+
+
+
+
+@media screen and (min-width: 760px) {
+    body{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        margin: 5% auto;
+        width: 60%;
+    }
+
+    main{
+        margin: 0% auto;
+        width: 60%;
+        border-radius: 0;
+    }
+
+    .todo-list{
+        border-radius: 0;
+    }
+
+    .todo-list li:not(.editing li){
+        height: 50px;
+    }
+
+    button .span{
+        font-size: large;
+    }
+
+    .form-input{
+        height: 9vh;
+    }
+
+    .background{
+        height: 50vh;
+    }
+
+    .todo-add,.addbtn{
+        font-size: large;
+    }
+
+    .circle{
+        width: 20px;
+        height: 20px;
+    }
+
+    .completed .circle::after{
+        top: 5px;
+        left: 4px
+    }
+
+    .todo-text{
+        font-size: medium;
+    }
+
+
+
+
+    .counting , .clear{
+        display:block;
+    }
+
+    .editing{
+        display: none;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: large;
+        margin: 0% auto;
+        width: 60%;
+        height: 50px;
+        top:0;
+        border-radius: 0 0 7px 7px;
+    }
+
+    footer ul li{
+        margin: 0 6px;
+    }
+
+    .attribution{
+        font-size: medium;
+        
+    }
+}
