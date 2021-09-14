@@ -156,3 +156,8 @@ function clearAll(){
 }
 
 
+
+new Sortable (list, {
+    Animation:350
+});
+
