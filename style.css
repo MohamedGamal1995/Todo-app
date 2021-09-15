@@ -269,19 +269,6 @@ footer ul{
     
 }
 
-.drag{
-    color: grey;
-    position: absolute;
-    bottom: 120px;
-    width: 100%;
-    text-align: center;
-    font-size: medium;
-    opacity: 73%;
-    z-index: -100;
-}
-
-
-
 
 
 @media screen and (min-width: 760px) {
