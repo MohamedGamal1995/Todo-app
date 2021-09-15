@@ -56,7 +56,7 @@ addBtn.addEventListener('click',(e)=>{
 
 
 list.addEventListener('click',deleteCheck);
-list.addEventListener('touchend',deleteCheck);
+list.addEventListener('touch',deleteCheck);
 
 function deleteCheck(e){
     if(e.target.classList[0]==="delete"){
