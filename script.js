@@ -94,10 +94,15 @@ const clearMob = document.querySelector(".clear-mob");
 const activeFooter = document.querySelector('footer ul')
 
 all.addEventListener('click',showAll);
+all.addEventListener('touch',showAll);
 showAct.addEventListener('click',showActive);
+showAct.addEventListener('touch',showActive);
 showComp.addEventListener('click',showComplete);
+showComp.addEventListener('touch',showComplete);
 clear.addEventListener('click',clearAll);
+clear.addEventListener('touch',clearAll);
 clearMob.addEventListener('click',clearAll);
+clearMob.addEventListener('touch',clearAll);
 
 
 
